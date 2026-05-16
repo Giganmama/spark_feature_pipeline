@@ -50,7 +50,7 @@ def main():
     
     # Загрузка в GreenPlum
     loader = GreenPlumLoader(spark)
-    loader.save_to_table(features_df, "client_features_mart", mode="overwrite")
+    loader.merge_data(features_df, "client_features_mart", "client_id")
     
     # Метрики
     logger.info(f"✅ Pipeline completed. Total clients processed: {features_df.count()}")
