@@ -5,10 +5,13 @@ Production-ready пайплайн для построения витрин да�
 ## 🎯 Что решает
 
 - 🔄 **DS → Production**: рефакторинг pandas-скриптов в распределённый PySpark
-- 📊 **Feature Engineering**: расчёт скользящих агрегатов, риск-флагов, поведенческих метрик
+-  **Feature Engineering**: расчёт скользящих агрегатов, риск-флагов, поведенческих метрик
 - 💾 **Industrial Data Marts**: автоматическая загрузка витрин в GreenPlum/Postgres
 - 🛡️ **Data Quality**: валидация схем, контроль полноты, обработка дублей
--  **Dockerized**: готов к запуску в CI/CD и k8s
+- 🐳 **Dockerized**: готов к запуску в CI/CD и k8s
+- ⚡ **Spark Optimization**: `bucketBy`, сортированные JOINs (SortMergeJoin), анализ планов выполнения (`df.explain()`) для устранения Shuffle Spill
+-  **Incremental Load (CDC)**: логика MERGE/Upsert для обновления витрин без полной перезаписи
+- 🤖 **AI Tools**: использование LLM (GigaChat/Copilot) для генерации сложных SQL-оконных функций и рефакторинга legacy-кода
 
 ##  Технологический стек
 
